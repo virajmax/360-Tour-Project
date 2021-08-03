@@ -12,7 +12,7 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
 	  window.onbeforeunload = function(e){
 		console.log("Calling OnClose from Browser!");
-		unityInstance.SendMessage("HighPolySphere", "OnClose");
+		unityInstance.SendMessage("HighPolySphere", "OnColse");
 		var dialogText = "You game has been saved!  Would you like to continue unloading the page?";
 		e.returnValue = dialogText;
 		return dialogText;
@@ -23,9 +23,9 @@
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
-        <<!--<div class="webgl-logo"></div>-->
+        <!--<div class="webgl-logo"></div>-->
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">VirtualTourTesting3</div>
+        <div class="title">Virtual 360 Tour</div>
       </div>
     </div>
   </body>
