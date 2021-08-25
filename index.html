@@ -9,9 +9,9 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
+		var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
 	  
-	  window.onbeforeunload = function(e) {
+		window.onbeforeunload = function(e) {
      
 			// These are the messages you're seeing in the gif
 			console.log("Calling OnClose from Browser!");
@@ -20,7 +20,7 @@
 			var dialogText = "You game has been saved!  Would you like to continue unloading the page?";
 			e.returnValue = dialogText;
 			return dialogText;
-		 };
+		};
     </script>
   </head>
   <body>
