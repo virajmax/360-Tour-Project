@@ -9,18 +9,7 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-		var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
-	  
-		window.onbeforeunload = function(e) {
-     
-			// These are the messages you're seeing in the gif
-			console.log("Calling OnClose from Browser!");
-			unityInstance.SendMessage("HighPolySphere", "OnClose");
-			 
-			var dialogText = "You game has been saved!  Would you like to continue unloading the page?";
-			e.returnValue = dialogText;
-			return dialogText;
-		};
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -29,7 +18,7 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Virtual Tour App</div>
+        <div class="title">VirtualTourTesting3</div>
       </div>
     </div>
   </body>
