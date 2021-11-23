@@ -10,16 +10,6 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/VRProject.json", {onProgress: UnityProgress});
-	  
-	  window.onbeforeunload = function(e) {
-
-		console.log("Calling OnClose from Browser!");
-		unityInstance.SendMessage("HighPolySphere", "OnClose");
-		var dialogText = "You game has been saved! Mould you like to continue unloading the page?";
-		e.returnValue = dialogText;
-		return dialogText;
-	};
-	  
     </script>
   </head>
   <body>
